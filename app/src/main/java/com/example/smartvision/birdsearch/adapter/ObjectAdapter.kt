@@ -45,7 +45,7 @@ class ObjectAdapter(private val birdList: List<Bird>,private val callbacks: Adap
             if (!TextUtils.isEmpty(bird.imageUrl)) {
                 ImageDownloadTask(imageView, imageSize).execute(bird.imageUrl)
             } else {
-                imageView.setImageResource(R.drawable.ic_picture_fallback)
+                imageView.setImageResource(R.drawable.ic_search)
             }
             titleView.text = bird.title
             subtitleView.text = bird.subtitle
