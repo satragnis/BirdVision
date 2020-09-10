@@ -22,8 +22,8 @@ import android.graphics.Paint
 import android.graphics.Paint.Style
 import android.graphics.PointF
 import com.example.smartvision.R
-import com.example.smartvision.camera.GraphicOverlay
-import com.example.smartvision.camera.GraphicOverlay.Graphic
+import com.example.smartvision.core.camera.GraphicOverlay
+import com.example.smartvision.core.camera.GraphicOverlay.Graphic
 
 /** A dot to indicate a detected object used by multiple objects detection mode.  */
 internal class ObjectDotGraphic(

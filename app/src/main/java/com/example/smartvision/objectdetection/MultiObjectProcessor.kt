@@ -25,10 +25,10 @@ import androidx.core.util.set
 import com.example.smartvision.InputInfo
 import com.example.smartvision.R
 import com.google.android.gms.tasks.Task
-import com.example.smartvision.camera.CameraReticleAnimator
-import com.example.smartvision.camera.GraphicOverlay
+import com.example.smartvision.core.camera.CameraReticleAnimator
+import com.example.smartvision.core.camera.GraphicOverlay
 import com.example.smartvision.viewmodel.WorkflowModelViewModel
-import com.example.smartvision.camera.FrameProcessorBase
+import com.example.smartvision.core.camera.FrameProcessorBase
 import com.example.smartvision.settings.PreferenceUtils
 import com.google.mlkit.common.model.LocalModel
 import com.google.mlkit.vision.common.InputImage

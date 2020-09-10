@@ -21,8 +21,8 @@ import android.os.Bundle
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import com.example.smartvision.R
-import com.example.smartvision.Utils
-import com.example.smartvision.camera.CameraSource
+import com.example.smartvision.helper.Utils
+import com.example.smartvision.core.camera.CameraSource
 import com.example.smartvision.settings.PreferenceUtils
 import java.util.HashMap
 

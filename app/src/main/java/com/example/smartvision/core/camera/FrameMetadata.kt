@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.smartvision.camera
+package com.example.smartvision.core.camera
 
 /** Metadata info of a camera frame.  */
 class FrameMetadata(val width: Int, val height: Int, val rotation: Int)

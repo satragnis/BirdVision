@@ -22,9 +22,9 @@ import android.graphics.Paint.Cap
 import android.graphics.Paint.Style
 import androidx.core.content.ContextCompat
 import com.example.smartvision.R
-import com.example.smartvision.camera.GraphicOverlay
-import com.example.smartvision.camera.GraphicOverlay.Graphic
-import com.example.smartvision.camera.CameraReticleAnimator
+import com.example.smartvision.core.camera.GraphicOverlay
+import com.example.smartvision.core.camera.GraphicOverlay.Graphic
+import com.example.smartvision.core.camera.CameraReticleAnimator
 
 /**
  * A camera reticle that locates at the center of canvas to indicate the system is active but has

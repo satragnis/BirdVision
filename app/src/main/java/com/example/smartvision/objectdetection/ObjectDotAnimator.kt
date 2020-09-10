@@ -20,7 +20,7 @@ import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import androidx.core.view.animation.PathInterpolatorCompat
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
-import com.example.smartvision.camera.GraphicOverlay
+import com.example.smartvision.core.camera.GraphicOverlay
 
 /**
  * Custom animator for the object dot.

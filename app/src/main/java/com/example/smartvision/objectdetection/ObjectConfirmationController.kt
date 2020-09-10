@@ -17,7 +17,7 @@
 package com.example.smartvision.objectdetection
 
 import android.os.CountDownTimer
-import com.example.smartvision.camera.GraphicOverlay
+import com.example.smartvision.core.camera.GraphicOverlay
 import com.example.smartvision.settings.PreferenceUtils
 
 /**

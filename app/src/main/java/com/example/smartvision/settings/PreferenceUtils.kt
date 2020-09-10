@@ -21,7 +21,7 @@ import androidx.annotation.StringRes
 import androidx.preference.PreferenceManager
 import com.example.smartvision.R
 import com.google.android.gms.common.images.Size
-import com.example.smartvision.camera.CameraSizePair
+import com.example.smartvision.core.camera.CameraSizePair
 
 /** Utility class to retrieve shared preferences.  */
 object PreferenceUtils {

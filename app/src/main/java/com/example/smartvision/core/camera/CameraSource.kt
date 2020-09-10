@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.smartvision.camera
+package com.example.smartvision.core.camera
 
 import android.content.Context
 import android.graphics.ImageFormat
@@ -26,7 +26,7 @@ import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.WindowManager
 import com.example.smartvision.R
-import com.example.smartvision.Utils
+import com.example.smartvision.helper.Utils
 import com.google.android.gms.common.images.Size
 import com.example.smartvision.settings.PreferenceUtils
 import java.io.IOException

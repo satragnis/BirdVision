@@ -28,8 +28,8 @@ import android.graphics.Shader.TileMode
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
 import com.example.smartvision.R
-import com.example.smartvision.camera.GraphicOverlay
-import com.example.smartvision.camera.GraphicOverlay.Graphic
+import com.example.smartvision.core.camera.GraphicOverlay
+import com.example.smartvision.core.camera.GraphicOverlay.Graphic
 
 /**
  * Draws the detected detectedObject info over the camera preview for multiple objects detection mode.

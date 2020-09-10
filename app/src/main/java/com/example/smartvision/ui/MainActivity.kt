@@ -21,9 +21,9 @@ import com.google.android.material.chip.Chip
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.common.base.Objects
 import com.google.common.collect.ImmutableList
-import com.example.smartvision.camera.CameraSource
-import com.example.smartvision.camera.CameraSourcePreview
-import com.example.smartvision.camera.GraphicOverlay
+import com.example.smartvision.core.camera.CameraSource
+import com.example.smartvision.core.camera.CameraSourcePreview
+import com.example.smartvision.core.camera.GraphicOverlay
 import com.example.smartvision.viewmodel.WorkflowModelViewModel
 import com.example.smartvision.viewmodel.WorkflowModelViewModel.WorkflowState
 import com.example.smartvision.objectdetection.MultiObjectProcessor
@@ -35,10 +35,11 @@ import com.example.smartvision.settings.SettingsActivity
 import java.io.IOException
 import android.view.View.OnClickListener
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.smartvision.birdsearch.adapter.AdapterCallbacks
 import com.example.smartvision.R
-import com.example.smartvision.WebviewActivity
 import com.example.smartvision.birdsearch.model.Bird
+import com.example.smartvision.helper.Util
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionDeniedResponse
@@ -70,7 +71,10 @@ class MainActivity : AppCompatActivity(), OnClickListener, PermissionListener , 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        searchEngine = SearchEngine(applicationContext)
+        checkForPermission()
+    }
+
+    private fun checkForPermission() {
         Dexter.withActivity(this)
             .withPermission(Manifest.permission.CAMERA)
             .withListener(this)
@@ -405,7 +409,7 @@ class MainActivity : AppCompatActivity(), OnClickListener, PermissionListener , 
     }
 
     override fun onPermissionDenied(response: PermissionDeniedResponse?) {
-        Toast.makeText(this,"Please provide permission",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,getString(R.string.camera_permission),Toast.LENGTH_SHORT).show()
     }
 
     override fun onPermissionRationaleShouldBeShown(
@@ -416,9 +420,24 @@ class MainActivity : AppCompatActivity(), OnClickListener, PermissionListener , 
 
     override fun onClickCallback(itemModel: Bird?) {
         itemModel?.let {
-            val intent = Intent(this,WebviewActivity()::class.java)
+            val intent = Intent(this, WebviewActivity()::class.java)
             intent.putExtra("query",it.title)
-            startActivity(intent)
+            if(Util.isOnline()) {
+                startActivity(intent)
+            }else{
+                showAlertDialog(getString(R.string.alert_dialog_title),getString(R.string.no_internet_label),false)
+            }
         }
+    }
+
+    private fun showAlertDialog(title: String, message: String, isCancelable: Boolean) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.setPositiveButton(android.R.string.yes) { _, _ ->
+            Toast.makeText(applicationContext,"Please connect to the internet.", Toast.LENGTH_SHORT).show()
+        }
+        builder.setCancelable(isCancelable)
+        builder.show()
     }
 }

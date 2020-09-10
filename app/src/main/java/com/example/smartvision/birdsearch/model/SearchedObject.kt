@@ -20,7 +20,7 @@ import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Rect
 import com.example.smartvision.R
-import com.example.smartvision.Utils
+import com.example.smartvision.helper.Utils
 import com.example.smartvision.objectdetection.DetectedObjectInfo
 
 /** Hosts the detected object info and its search result.  */

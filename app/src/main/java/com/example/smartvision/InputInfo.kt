@@ -17,7 +17,8 @@
 package com.example.smartvision
 
 import android.graphics.Bitmap
-import com.example.smartvision.camera.FrameMetadata
+import com.example.smartvision.core.camera.FrameMetadata
+import com.example.smartvision.helper.Utils
 import java.nio.ByteBuffer
 
 interface InputInfo {

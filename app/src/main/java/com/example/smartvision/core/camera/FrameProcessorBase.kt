@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.smartvision.camera
+package com.example.smartvision.core.camera
 
 import android.os.SystemClock
 import android.util.Log

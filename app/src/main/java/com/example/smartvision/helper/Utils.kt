@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.smartvision
+package com.example.smartvision.helper
 
 import android.app.Activity
 import android.content.ContentResolver
@@ -38,7 +38,7 @@ import android.util.Log
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.exifinterface.media.ExifInterface
-import com.example.smartvision.camera.CameraSizePair
+import com.example.smartvision.core.camera.CameraSizePair
 import com.google.mlkit.vision.common.InputImage
 import java.io.ByteArrayOutputStream
 import java.io.IOException

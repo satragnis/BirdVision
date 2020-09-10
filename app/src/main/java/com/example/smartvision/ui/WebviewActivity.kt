@@ -1,10 +1,11 @@
-package com.example.smartvision
+package com.example.smartvision.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smartvision.R
 import kotlinx.android.synthetic.main.activity_webview.*
 
 
